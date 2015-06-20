@@ -40,6 +40,24 @@ sequelize.sync().then(function(){
 			Quiz.create({
 				pregunta:'Capital de Italia',
 				respuesta:'Roma'
+			});
+			Quiz.create({
+				pregunta:'Capital de Portugal',
+				respuesta:'Lisboa'
+			});
+			Quiz.create({
+				pregunta:'Ganador del Mundial de Futbol 2014',
+				respuesta:'Alemania'
+			});
+			Quiz.create({
+				pregunta:'Padre de la informática moderna',
+				respuesta:'Alan Turing'
+
+			});
+			Quiz.create({
+				pregunta:'Año en el que termino la Segunda Guerra Mundial',
+				respuesta:'1945'
+			
 			}).then(function(){console.log('Base de datos inicializada')});
 		}
 	});

@@ -25,7 +25,13 @@
 
 			<section class="main" id="s1">
 				<div>
-					<div><%- body %></div>
+				<table>
+				<tr><td><a href="quizes/1">Capital de Italia</a></td></tr>
+				<tr><td><a href="quizes/2">Capital de Portugal</a></td></tr>
+				<tr><td><a href="quizes/3">Ganador del Mundial de Futbol 2014</a></td></tr>
+				<tr><td><a href="quizes/4">Padre de la informática moderna</a></td></tr>
+				<tr><td><a href="quizes/5">Año en el que termino la Segunda Guerra Mundial</a></td></tr>
+				</table>
 				</div>
 			</section>
 
