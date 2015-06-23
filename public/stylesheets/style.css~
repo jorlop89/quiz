@@ -12,14 +12,16 @@ body {
   border: 1px solid #999; padding: 1%; margin-bottom: 1px; color:black;
 }
 
-section > div{
- padding: 20px;
-}
-
-
 header, nav, section{
   background: #eee; text-align:center;}
 }
+
+
+section > div{
+   padding: 20px;
+}
+
+
 
 footer{
   background: #eee; text-align:center;}
@@ -27,9 +29,4 @@ footer{
 
 nav span{
   margin: 0px 10px 0px 10px}
-}
-
-
-a {
-  color: #00B7FF;
 }

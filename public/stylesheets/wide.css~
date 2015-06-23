@@ -2,6 +2,8 @@ body{
 	background: #999;
 }
 
+#page-wrap:after{content: "Wide Layout";}
+
 nav{
 	float: left;
 	width: 15%;
@@ -23,7 +25,3 @@ footer{
 	clear:both;
 	display: block;
 }
-
-#a0 {float:right;}
-#a1 {float:left;}
-#a2 {float:left;}

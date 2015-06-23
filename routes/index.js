@@ -1,7 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+//var quizController = require('../controllers/quiz_controller');
 var quizController = require('../controllers/quiz_controller');
+
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -22,7 +24,7 @@ router.get('/quizes?search=texto_a_buscar',quizController.index);
 
 
 //Creación de la petición al enlace 'author'
-router.get('/author', function (req, res, next) {
+router.get('/author', function (req, res) {
  res.render('author', {});
 });
 

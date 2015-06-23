@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
+		<meta name="viewport" content="device-width" initial-scale="1.0">
 		<meta charset="utf-8"><title>Preguntas</title>
-		<link rel='stylesheet' type="text/css" href="stylesheets/style.css">
-		<link rel='stylesheet' type="text/css" media="only screen and (min-width:530px) and (min-device-width:481px)" href="stylesheets/wide.css">
-		<link rel='stylesheet' type="text/css" media="only screen and (max-width:480px)" href="stylesheets/smartphone.css">
+		<link rel='stylesheet' type='text/css' href='/stylesheets/style.css' />
+	  	<link rel='stylesheet' 
+	        media='only screen and (max-width: 600px) and (min-width: 481px)'
+	        href='/stylesheets/wide.css' />
+	  	<link rel='stylesheet' 
+	        media='only screen and (max-width: 480px)' 
+	        href='/stylesheets/smartphone.css' />
+
+		<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	
 
 	</head>
@@ -22,17 +29,15 @@
 				<span><a href="/author">Autor de la web</a></span><br><br><br>
 
 				<form method="get" action="/quizes">
-				    <input type="text" name="search" value="texto_a_buscar" /><br>
-				    <input type="submit" value="Enviar">
+				    <input id="et1" type="text" name="search" value="Buscar" />
+				    <input id="b1" type="submit" value="Enviar">
 				</form>
 
 
 			</nav>
 
 			<section class="main" id="s1">
-				<div>
-					<div><%- body %></div>
-				</div>
+				<div><%- body %></div>
 			</section>
 
 			<footer class="main" id="f1">
