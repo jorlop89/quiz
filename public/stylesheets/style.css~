@@ -1,19 +1,63 @@
 *{ margin: 0; padding: 0;}
 
 body {
-  font: 16px "Georgia",serif;
+  font: 16px "Montserrat",serif;
+  background-color:#786D5F;
 }
 
 #page-wrap{
- margin: 2% auto; color: black;
+ margin: 2% auto; 
 }
 
 #page-wrap > .main{
-  border: 1px solid #999; padding: 1%; margin-bottom: 1px; color:black;
+  border: 1px solid #999; padding: 1%; margin-bottom: 1px; color:#EDB32B;
 }
 
-header, nav, section{
-  background: #eee; text-align:center;}
+header{
+  background: #eee; 
+  text-align:center;
+  background-color: #2B65EC;
+}
+
+nav{
+  background: #eee; 
+  text-align:center;
+  background-color: #413839;
+}
+
+#b1{
+	font: 15px "Montserrat",serif;
+	background-color: #EDB32B;
+	border-color: #413839; 
+}
+#et1{
+	font: 15px "Montserrat",serif;
+
+}
+
+#b2{
+  font: 15px "Montserrat",serif;
+  background-color: #EDB32B;
+  border-color: #413839; 
+}
+
+#et2{
+  font: 15px "Montserrat",serif;
+
+}
+
+#b3{
+  font: 15px "Montserrat",serif;
+  background-color: #EDB32B;
+  border-color: #413839; 
+}
+
+
+section{
+  background: #eee; 
+  text-align:center;
+  background-color: #8C001A;
+  
 }
 
 
@@ -21,12 +65,23 @@ section > div{
    padding: 20px;
 }
 
-
+table{
+    margin: 0 auto;
+   	text-align: left;
+}
 
 footer{
-  background: #eee; text-align:center;}
+  background: #eee; 
+  text-align:center;
+  background-color: #413839;
+
 }
 
 nav span{
-  margin: 0px 10px 0px 10px}
+  margin: 0 auto;
+  text-align: left;
+}
+
+a{
+	color:#EDB32B;;
 }
