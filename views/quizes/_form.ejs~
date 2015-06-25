@@ -2,6 +2,6 @@
 <input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/><p>
 <label for="resp" class="rem">Respuesta</label>
 <input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/><p><br>
-<a href="/quizes"><button id="b2" type="button">Cancelar</button></a>
-<input type="submit" id="b2" value="Salvar">
+<a href="/quizes"><button type="button">Cancelar</button></a>
+<input type="submit" value="Salvar">
 

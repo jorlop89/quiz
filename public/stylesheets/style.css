@@ -30,23 +30,12 @@ nav{
 	background-color: #EDB32B;
 	border-color: #413839; 
 }
-#et1{
+#et1,#et2{
 	font: 15px "Montserrat",serif;
 
 }
 
-#b2{
-  font: 15px "Montserrat",serif;
-  background-color: #EDB32B;
-  border-color: #413839; 
-}
-
-#et2{
-  font: 15px "Montserrat",serif;
-
-}
-
-#b3{
+#b2,#b3{
   font: 15px "Montserrat",serif;
   background-color: #EDB32B;
   border-color: #413839; 
