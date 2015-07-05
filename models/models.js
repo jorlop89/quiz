@@ -39,25 +39,31 @@ sequelize.sync().then(function(){
 		if(count === 0){ //la tabla se inicializa solo si está vacia.
 			Quiz.create({
 				pregunta:'Capital de Italia',
-				respuesta:'Roma'
+				respuesta:'Roma',
+				tema: "humanidades"
 			});
 			Quiz.create({
 				pregunta:'Capital de Portugal',
-				respuesta:'Lisboa'
+				respuesta:'Lisboa',
+				tema: "humanidades"
 			});
 			Quiz.create({
 				pregunta:'Ganador del Mundial de Futbol 2014',
-				respuesta:'Alemania'
+				respuesta:'Alemania',
+				tema: "ocio"
+
 			});
 			Quiz.create({
 				pregunta:'Padre de la informática moderna',
-				respuesta:'Alan Turing'
+				respuesta:'Alan Turing',
+				tema: "tecnología"
 
 			});
 			Quiz.create({
 				pregunta:'Año en el que termino la Segunda Guerra Mundial',
-				respuesta:'1945'
-			
+				respuesta:'1945',
+				tema: "humanidades"
+
 			}).then(function(){console.log('Base de datos inicializada')});
 		}
 	});

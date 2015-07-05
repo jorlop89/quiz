@@ -2,6 +2,34 @@
 <input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/><p>
 <label for="resp" class="rem">Respuesta</label>
 <input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/><p><br>
-<a href="/quizes"><button type="button">Cancelar</button></a>
-<input type="submit" value="Salvar">
+<label for="tema">Temas</label>
+<select id="tema" name="quiz[tema]">
+	<% 
+	var selected ='';
+	[
+		{value:"seleccione", text: "Seleccione..."},
+		{value:"ciencia", text: "Ciencia"},
+		{value:"humanidades", text: "Humanidades"},
+		{value:"tecnología", text: "Tecnología"},
+		{value:"ocio", text: "Ocio"},
+		{value:"otro", text: "Otro"}
+
+	].forEach(function(ot){
+
+		if(ot.value == quiz.tema){
+			selected = 'selected';
+		}
+
+		else{
+			selected= '';
+		}
+
+	%>
+
+	<option value="<%= ot.value %>" <%= selected %>> <%= ot.text %> </option>
+	<% }); %>
+
+</select><br><br>
+<a href="/quizes"><button id="b2" type="button">Cancelar</button></a>
+<input type="submit" id="b2" value="Salvar">
 
