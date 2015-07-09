@@ -1,13 +1,12 @@
 <label for="preg" class="rem">Pregunta</label>
-<input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/><p>
+<input type="text" id="preg" name="quiz[pregunta]" value="" placeholder="<%= quiz.pregunta %>"/><p>
 <label for="resp" class="rem">Respuesta</label>
-<input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/><p><br>
+<input type="text" id="resp" name="quiz[respuesta]" value="" placeholder="<%= quiz.respuesta %>"/><p><br>
 <label for="tema">Temas</label>
 <select id="tema" name="quiz[tema]">
 	<% 
 	var selected ='';
 	[
-		{value:"seleccione", text: "Seleccione..."},
 		{value:"ciencia", text: "Ciencia"},
 		{value:"humanidades", text: "Humanidades"},
 		{value:"tecnología", text: "Tecnología"},

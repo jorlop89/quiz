@@ -6,11 +6,14 @@ body {
 }
 
 #page-wrap{
- margin: 2% auto; 
+ margin: 0 auto;
+ padding: 5px;
 }
 
 #page-wrap > .main{
-  border: 1px solid #999; padding: 1%; margin-bottom: 1px; color:#EDB32B;
+  border: 1px solid #999; 
+  padding: 1.05%; 
+  margin-bottom: 1px; color:#EDB32B;
 }
 
 header{
@@ -26,12 +29,13 @@ nav{
 }
 
 #b1{
-	font: 15px "Montserrat",serif;
-	background-color: #EDB32B;
-	border-color: #413839; 
+  font: 15px "Montserrat",serif; 
+  background-color: #EDB32B;
+  border-color: #413839; 
 }
+
 #et1,#et2{
-	font: 15px "Montserrat",serif;
+  font: 15px "Montserrat",serif;
 
 }
 
@@ -49,14 +53,9 @@ section{
   
 }
 
-
-section > div{
-   padding: 20px;
-}
-
 table{
     margin: 0 auto;
-   	text-align: left;
+    text-align: left;
 }
 
 footer{
@@ -77,5 +76,5 @@ nav span{
 }
 
 a{
-	color:#EDB32B;;
+  color:#EDB32B;;
 }
