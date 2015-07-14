@@ -1,10 +1,12 @@
 var models = require('../models/models.js');
 
-
 //Autoload - factoriza el código si ruta incluye :quizId
 exports.load = function(req, res, next, quizId){
-	models.Quiz.findById(quizId).then(
-		function(quiz){
+	//models.Quiz.findById(quizId).then(
+	models.Quiz.find({
+		where: {id: Number(quizId)},
+		include: [{model: models.Comment}]
+	}).then(function(quiz){
 			if(quiz){
 				req.quiz = quiz;
 				next();
@@ -15,11 +17,8 @@ exports.load = function(req, res, next, quizId){
 			}
 		}).catch(function(error){
 			next(error);
-		});
-}
-
-
-
+	});
+};
 
  //GET /quizes
 
@@ -37,21 +36,21 @@ exports.load = function(req, res, next, quizId){
 		search = "%" + req.query.search.replace(/\u0020/g,"%") + "%";
 		//search = search.trim().replace(/\s/g,"%");
 
- 		/*models.Quiz.findAll({where: ["lower(pregunta) like lower(?)", search], order: 'pregunta ASC'}).then(
-			function(quizes){
-				res.render('quizes/index.ejs',{quizes:quizes , errors: []});
-			}
-		).catch(function(error){
- 			next(error);
- 		});*/
-
-		models.Quiz.findAll({where: ["lower(pregunta) like lower(?)", search], order: 'pregunta ASC'}).then(
+ 		models.Quiz.findAll({where: ["lower(pregunta) like lower(?)", search], order: 'pregunta ASC'}).then(
 			function(quizes){
 				res.render('quizes/index.ejs',{quizes:quizes , errors: []});
 			}
 		).catch(function(error){
  			next(error);
  		});
+
+		/*models.Quiz.findAll({where: ["lower(pregunta) like lower(?)", search], order: 'pregunta ASC'}).then(
+			function(quizes){
+				res.render('quizes/index.ejs',{quizes:quizes , errors: []});
+			}
+		).catch(function(error){
+ 			next(error);
+ 		});*/
 
 	}
 	else{
