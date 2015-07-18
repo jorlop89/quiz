@@ -12,7 +12,7 @@ body {
 
 #page-wrap > .main{
   border: 1px solid #999; 
-  padding: 1.06%; 
+  padding: 1.05%; 
   margin-bottom: 1px; color:#EDB32B;
 }
 
