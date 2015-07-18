@@ -78,3 +78,7 @@ nav span{
 a{
   color:#EDB32B;;
 }
+
+.right{
+	float:right;
+}

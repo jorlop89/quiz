@@ -5,14 +5,14 @@
 	<div class="field">
 		<label for="login">Login:</label><br/>
 		<input type="text" id="login" name="login" size="30"/>
-	</div>
+	</div><br/>
 
 	<div class="field">
 		<label for="password">Password:</label><br/>
 		<input type="password" id="password" name="password" size="30"/>
-	</div>
+	</div><br/>
 
 	<div class="actions">
-		<input name="commit" type="submit" value="Login" />
+		<input id="b4" name="commit" type="submit" value="Login" />
 	</div>
 </form>
