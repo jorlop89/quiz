@@ -7,11 +7,12 @@
 	<% 
 	var selected ='';
 	[
+		{value:"otro", text: "Otro"},
 		{value:"ciencia", text: "Ciencia"},
 		{value:"humanidades", text: "Humanidades"},
 		{value:"tecnología", text: "Tecnología"},
-		{value:"ocio", text: "Ocio"},
-		{value:"otro", text: "Otro"}
+		{value:"ocio", text: "Ocio"}
+		
 
 	].forEach(function(ot){
 
