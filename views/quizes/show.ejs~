@@ -4,9 +4,18 @@
   <input id="b2" type="submit" value="Enviar">
 </form>
 
+</br>
+
 <p><a href="/quizes/<%= quiz.id %>/comments/new"><button id="b2">Nuevo comentario</button></a></p></br>
 
 <p><strong>Comentarios:</strong></p>
 <%for(index in quiz.Comments){%>
-	<p>- <%=quiz.Comments[index].texto%></p>
+	<%if(quiz.Comments[index].publicado || session.user){%>
+		<p>- <%=quiz.Comments[index].texto%>
+		<%if(session.user && !quiz.Comments[index].publicado){%>
+			<a href="/quizes/<% quiz.id %>/comments/<%=quiz.Comments[index].id%>/publish">
+			<button id="b2">Publicar</button></a>
+		<%}%>
+		</p>
+	<%}%>
 <%}%>
