@@ -5,6 +5,7 @@ var router = express.Router();
 var quizController = require('../controllers/quiz_controller');
 var commentController = require('../controllers/comment_controller');
 var sessionController = require('../controllers/session_controller');
+var statisticsController = require('../controllers/statistics_controller');
 
 
 /* GET home page. */
@@ -40,6 +41,9 @@ router.get('/quizes/:quizId(\\d+)/comments/:commentId(\\d+)/publish', sessionCon
 //router.get('/quizes/answer', quizController.answer);
 
 router.get('/quizes?search=texto_a_buscar',quizController.index);
+
+// Definición de ruta para las estadísticas
+router.get('/quizes/statistics', statisticsController.calculate, statisticsController.show);
 
 
 //Creación de la petición al enlace 'author'

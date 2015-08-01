@@ -12,6 +12,21 @@ module.exports = function(sequelize, DataTypes){
 			defaultValue: false
 		 }
 
-		}
+		},
+		{
+			classMethods: {
+	      		countUnpublished: function () {
+	       		return this.aggregate('QuizId', 'count', {'where': { 'publicado': false }}).then('success',function(count) {
+					return count;
+				})
+     		},
+	    		countCommentedQuizes: function () {
+	       		return this.aggregate('QuizId', 'count', {'distinct': true }).then('success',function(count) {
+					return count;
+				})
+      		}	
+    	}
+    	}	
+
 	);
-}
+};
