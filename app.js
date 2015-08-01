@@ -28,8 +28,8 @@ app.use(bodyParser.json());
 //app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded());
 app.use(cookieParser('Quiz 2015'));
-app.use(session({ secret: 'keyboard cat', key: 'sid', cookie: { secure: true }}))
-//app.use(session());
+//app.use(session({ secret: 'keyboard cat', key: 'sid', cookie: { secure: true }}))
+app.use(session());
 app.use(methodOverride('_method'));
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -48,8 +48,8 @@ app.use(function(req, res, next){
 
     if((req.session.user) && (tiempo_inactivo_user > 120000)){
         console.log("Excedido tiempo de sesion:" + (tiempo_inactivo_user/1000) + " s");
-        //req.session.destroy();
-        delete req.session.user;
+        req.session.destroy();
+        //delete req.session.user;
         //res.redirect(req.session.redir.toString());
     }
 
