@@ -4,7 +4,7 @@ var models = require('../models/models.js');
 exports.load = function(req,res,next,commentId){
 	models.Comment.find({
 		where:{
-			id:Number(commentId)
+			id: Number(commentId)
 		}
 	}).then(function(comment){
 		if(comment){
@@ -53,7 +53,8 @@ exports.create = function(req,res){
 exports.publish = function(req,res){
 	req.comment.publicado = true;
 
-	req.comment.save({fields:["publicado"]}).then(function(){
+	req.comment.save( {fields:["publicado"]})
+	.then(function(){
 		res.redirect('/quizes/'+ req.params.quizId);
 	}).catch(function(error){
 		next(error);
